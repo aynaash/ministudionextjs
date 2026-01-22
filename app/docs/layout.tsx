@@ -9,10 +9,12 @@ export const metadata: Metadata = {
 
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex min-h-screen bg-background">
+    <div className="flex min-h-screen bg-black">
       <DocsSidebar />
-      <main className="flex-1 px-8 py-12 max-w-4xl overflow-auto">
-        <article className="prose prose-invert max-w-none text-foreground">{children}</article>
+      <main className="flex-1 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-4xl overflow-auto lg:ml-0 ml-0">
+        <article className="prose prose-invert max-w-none text-white prose-headings:text-white prose-a:text-cyan-400 prose-code:text-pink-300">
+          {children}
+        </article>
       </main>
     </div>
   )
